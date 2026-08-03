@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>我知道你還有錢｜0050</title>
+    <title>我知道你們還有錢｜0050</title>
 
     <style>
         * {
@@ -38,6 +38,7 @@
         .brand {
           color: #9ca3af;
           font-size: 13px;
+          letter-spacing: 1px;
         }
 
         h1 {
@@ -117,6 +118,31 @@
           font-weight: 700;
         }
 
+        /* 哲哲語錄 */
+
+        .quote-panel {
+          text-align: center;
+          padding: 38px 20px;
+        }
+
+        .quote-title {
+          margin-bottom: 15px;
+          color: #6b7280;
+          font-size: 13px;
+        }
+
+        #quote {
+          font-size: 23px;
+          font-weight: 700;
+          line-height: 1.7;
+        }
+
+        .quote-source {
+          margin-top: 12px;
+          color: #9ca3af;
+          font-size: 12px;
+        }
+
         .info {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -192,6 +218,7 @@
         }
 
         @media (max-width: 850px) {
+
           .cards {
             grid-template-columns: repeat(2, 1fr);
           }
@@ -199,9 +226,11 @@
           .info {
             grid-template-columns: 1fr;
           }
+
         }
 
         @media (max-width: 500px) {
+
           .cards {
             grid-template-columns: 1fr;
           }
@@ -209,54 +238,153 @@
           h1 {
             font-size: 24px;
           }
+
+          #quote {
+            font-size: 19px;
+          }
+
         }
     </style>
 </head>
 
+
 <body>
 
 <header>
+
     <div>
-        <div class="brand">I KNOW YOU HAVE MONEY</div>
-        <h1>我知道你還有錢</h1>
-        <div class="subtitle">0050｜一億元資產追蹤器</div>
+
+        <div class="brand">
+            I KNOW YOU HAVE MONEY
+        </div>
+
+        <h1>
+            我知道你們還有錢
+        </h1>
+
+        <div class="subtitle">
+            哲哲 × 0050｜一億元資產追蹤器
+        </div>
+
     </div>
+
 </header>
 
+
 <main>
+
+    <!-- 資料狀態 -->
 
     <div class="status" id="status">
         正在載入 0050 資料...
     </div>
 
+
+    <!-- 四大數據 -->
+
     <section class="cards">
 
         <div class="card">
-            <div class="label">0050 最新價格</div>
-            <div class="value" id="currentPrice">--</div>
-            <div class="small" id="priceDate">--</div>
+
+            <div class="label">
+                0050 最新價格
+            </div>
+
+            <div
+                    class="value"
+                    id="currentPrice"
+            >
+                --
+            </div>
+
+            <div
+                    class="small"
+                    id="priceDate"
+            >
+                --
+            </div>
+
         </div>
 
-        <div class="card">
-            <div class="label">目前資產</div>
-            <div class="value" id="assetValue">--</div>
-            <div class="small">一億元模擬持倉</div>
-        </div>
 
         <div class="card">
-            <div class="label">累計獲利</div>
-            <div class="value" id="profit">--</div>
-            <div class="small" id="profitRate">報酬率 --</div>
+
+            <div class="label">
+                目前資產
+            </div>
+
+            <div
+                    class="value"
+                    id="assetValue"
+            >
+                --
+            </div>
+
+            <div class="small">
+                一億元模擬持倉
+            </div>
+
         </div>
 
+
         <div class="card">
-            <div class="label">投入本金</div>
-            <div class="value">$100,000,000</div>
-            <div class="small">2026/07/29 開始</div>
+
+            <div class="label">
+                累計獲利
+            </div>
+
+            <div
+                    class="value"
+                    id="profit"
+            >
+                --
+            </div>
+
+            <div
+                    class="small"
+                    id="profitRate"
+            >
+                報酬率 --
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="label">
+                投入本金
+            </div>
+
+            <div class="value">
+                $100,000,000
+            </div>
+
+            <div class="small">
+                2026/07/29 開始
+            </div>
+
         </div>
 
     </section>
 
+
+    <!-- 哲哲語錄 -->
+
+    <section class="panel quote-panel">
+
+        <div class="quote-title">
+            今日哲哲語錄
+        </div>
+
+        <div id="quote">
+            載入中...
+        </div>
+
+    </section>
+
+
+    <!-- 建倉資訊 -->
 
     <section class="panel">
 
@@ -264,42 +392,104 @@
             建倉資訊
         </div>
 
+
         <div class="info">
 
             <div class="info-item">
-                <div class="info-label">初始本金</div>
-                <div class="info-value">$100,000,000</div>
+
+                <div class="info-label">
+                    初始本金
+                </div>
+
+                <div class="info-value">
+                    $100,000,000
+                </div>
+
             </div>
 
-            <div class="info-item">
-                <div class="info-label">建倉日期</div>
-                <div class="info-value">2026/07/29</div>
-            </div>
 
             <div class="info-item">
-                <div class="info-label">模擬持有股數</div>
-                <div class="info-value" id="shares">--</div>
+
+                <div class="info-label">
+                    建倉日期
+                </div>
+
+                <div class="info-value">
+                    2026/07/29
+                </div>
+
             </div>
 
-            <div class="info-item">
-                <div class="info-label">建倉價格</div>
-                <div class="info-value" id="entryPrice">--</div>
-            </div>
 
             <div class="info-item">
-                <div class="info-label">最新價格</div>
-                <div class="info-value" id="latestPrice">--</div>
+
+                <div class="info-label">
+                    模擬持有股數
+                </div>
+
+                <div
+                        class="info-value"
+                        id="shares"
+                >
+                    --
+                </div>
+
             </div>
 
+
             <div class="info-item">
-                <div class="info-label">價格漲跌</div>
-                <div class="info-value" id="priceChange">--</div>
+
+                <div class="info-label">
+                    建倉價格
+                </div>
+
+                <div
+                        class="info-value"
+                        id="entryPrice"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-label">
+                    最新價格
+                </div>
+
+                <div
+                        class="info-value"
+                        id="latestPrice"
+                >
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-label">
+                    價格漲跌
+                </div>
+
+                <div
+                        class="info-value"
+                        id="priceChange"
+                >
+                    --
+                </div>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- 資產圖表 -->
 
     <section class="panel">
 
@@ -308,11 +498,17 @@
         </div>
 
         <div class="chart">
-            <canvas id="assetChart"></canvas>
+
+            <canvas
+                    id="assetChart"
+            ></canvas>
+
         </div>
 
     </section>
 
+
+    <!-- 每日損益 -->
 
     <section class="panel">
 
@@ -325,16 +521,48 @@
             <table>
 
                 <thead>
+
                 <tr>
-                    <th>日期</th>
-                    <th>0050</th>
-                    <th>資產市值</th>
-                    <th>獲利</th>
-                    <th>報酬率</th>
+
+                    <th>
+                        日期
+                    </th>
+
+                    <th>
+                        0050
+                    </th>
+
+                    <th>
+                        資產市值
+                    </th>
+
+                    <th>
+                        獲利
+                    </th>
+
+                    <th>
+                        報酬率
+                    </th>
+
                 </tr>
+
                 </thead>
 
-                <tbody id="dailyTable"></tbody>
+
+                <tbody id="dailyTable">
+
+                <tr>
+
+                    <td
+                            colspan="5"
+                            class="empty"
+                    >
+                        載入中...
+                    </td>
+
+                </tr>
+
+                </tbody>
 
             </table>
 
@@ -344,10 +572,13 @@
 
 
     <div class="note">
-        模擬條件：2026/07/29 以當日 0050
-        收盤價投入新台幣 1 億元。
-        後續不追加、不贖回，不計交易成本、稅費及股利。
+
+        模擬條件：2026/07/29
+        以當日 0050 收盤價投入新台幣 1 億元。
+        後續不追加、不贖回，
+        不計交易成本、稅費及股利。
         每日依 0050 收盤價計算資產市值與損益。
+
     </div>
 
 </main>
@@ -355,47 +586,119 @@
 
 <script>
 
+    /* ==========================================
+       基本設定
+    ========================================== */
+
     const CAPITAL = 100000000;
+
     const START_DATE = "2026-07-29";
 
+
     let dailyData = [];
+
     let entryPrice = null;
+
     let shares = null;
 
 
-    /* =========================
-       基本工具
-    ========================= */
+    /* ==========================================
+       DOM
+    ========================================== */
 
     function $(id) {
+
       return document.getElementById(id);
+
     }
 
+
+    /* ==========================================
+       金額格式
+    ========================================== */
 
     function money(value) {
 
-      return new Intl.NumberFormat("zh-TW", {
-        style: "currency",
-        currency: "TWD",
-        maximumFractionDigits: 0
-      }).format(value);
+      return new Intl.NumberFormat(
+        "zh-TW",
+        {
+          style: "currency",
+          currency: "TWD",
+          maximumFractionDigits: 0
+        }
+      ).format(value);
 
     }
 
+
+    /* ==========================================
+       股價格式
+    ========================================== */
 
     function price(value) {
+
       return Number(value).toFixed(2);
+
     }
 
+
+    /* ==========================================
+       日期格式
+    ========================================== */
 
     function dateText(date) {
+
       return date.replaceAll("-", "/");
+
     }
 
 
-    /* =========================
+    /* ==========================================
+       哲哲風格語錄
+    ========================================== */
+
+    const quotes = [
+
+      "踏著我的血前進！",
+
+      "叫你 All in 就 All in！",
+
+      "你不要跌一點點就受不了了，好不好？",
+
+      "你在怕什麼，這越跌你越要買啊！",
+
+      "巴菲特沒被套過是不是？",
+
+      "你自己買在最高點那不關我的事情",
+
+      "我沒有說賭不好，可是你不要騙自己在投資嘛！",
+
+      "你看我賠錢了，我還是充滿了自信！",
+
+    ];
+
+
+    function showQuote() {
+
+      const index =
+        Math.floor(
+          Math.random() *
+          quotes.length
+        );
+
+
+      $("quote").textContent =
+        `「${quotes[index]}」`;
+
+    }
+
+
+    showQuote();
+
+
+    /* ==========================================
        讀取 GitHub Actions 產生的 JSON
-    ========================= */
+    ========================================== */
 
     async function loadData() {
 
@@ -405,22 +708,39 @@
           "正在讀取最新 0050 資料...";
 
 
-        const response = await fetch(
-          "./data/0050.json?ts=" + Date.now(),
-          {
-            cache: "no-store"
-          }
-        );
+        const response =
+          await fetch(
+            "./data/0050.json?ts=" +
+            Date.now(),
+            {
+              cache: "no-store"
+            }
+          );
 
 
         if (!response.ok) {
+
           throw new Error(
             `HTTP ${response.status}`
           );
+
         }
 
 
-        const json = await response.json();
+        const json =
+          await response.json();
+
+
+        if (
+          !json.data ||
+          !Array.isArray(json.data)
+        ) {
+
+          throw new Error(
+            "0050 JSON 資料格式錯誤"
+          );
+
+        }
 
 
         dailyData =
@@ -429,38 +749,47 @@
               row.date >= START_DATE
             )
             .sort((a, b) =>
-              a.date.localeCompare(b.date)
+              a.date.localeCompare(
+                b.date
+              )
             );
 
 
         if (!dailyData.length) {
+
           throw new Error(
             "目前沒有 7/29 之後的資料"
           );
+
         }
 
 
         const start =
           dailyData.find(
-            row => row.date === START_DATE
+            row =>
+              row.date === START_DATE
           );
 
 
         if (!start) {
+
           throw new Error(
             "找不到 2026/07/29 建倉價格"
           );
+
         }
 
 
-        entryPrice = start.close;
+        entryPrice =
+          Number(start.close);
+
 
         shares =
           CAPITAL / entryPrice;
 
 
         $("status").textContent =
-          `資料更新時間：${json.updatedAt}`;
+          `資料更新時間：${json.updatedAt || "未知"}`;
 
 
         render();
@@ -468,7 +797,11 @@
 
       } catch (error) {
 
-        console.error(error);
+        console.error(
+          "0050 資料讀取失敗：",
+          error
+        );
+
 
         $("status").textContent =
           "資料讀取失敗：" +
@@ -479,54 +812,83 @@
     }
 
 
-    /* =========================
+    /* ==========================================
        損益計算
-    ========================= */
+    ========================================== */
 
     function calculate(row) {
 
       const asset =
         shares * row.close;
 
+
       const profit =
         asset - CAPITAL;
 
+
       const rate =
-        profit / CAPITAL * 100;
+        profit /
+        CAPITAL *
+        100;
 
 
       return {
+
         ...row,
+
         asset,
+
         profit,
+
         rate
+
       };
 
     }
 
 
-    /* =========================
+    /* ==========================================
        Dashboard
-    ========================= */
+    ========================================== */
 
     function renderDashboard() {
 
+      if (
+        !entryPrice ||
+        !shares ||
+        !dailyData.length
+      ) {
+
+        return;
+
+      }
+
+
       const latest =
-        dailyData[dailyData.length - 1];
+        dailyData[
+          dailyData.length - 1
+        ];
+
 
       const result =
         calculate(latest);
 
 
       const change =
-        latest.close - entryPrice;
+        latest.close -
+        entryPrice;
+
 
       const changeRate =
-        change / entryPrice * 100;
+        change /
+        entryPrice *
+        100;
 
 
       $("currentPrice").textContent =
-        "$" + price(latest.close);
+        "$" +
+        price(latest.close);
+
 
       $("priceDate").textContent =
         "資料日期：" +
@@ -543,128 +905,216 @@
 
       $("profitRate").textContent =
         "報酬率 " +
-        (result.rate >= 0 ? "+" : "") +
+        (
+          result.rate >= 0
+            ? "+"
+            : ""
+        ) +
         result.rate.toFixed(2) +
         "%";
 
 
       $("shares").textContent =
-        shares.toLocaleString("zh-TW", {
-          maximumFractionDigits: 2
-        });
+        shares.toLocaleString(
+          "zh-TW",
+          {
+            maximumFractionDigits: 2
+          }
+        );
 
 
       $("entryPrice").textContent =
-        "$" + price(entryPrice);
+        "$" +
+        price(entryPrice);
 
 
       $("latestPrice").textContent =
-        "$" + price(latest.close);
+        "$" +
+        price(latest.close);
 
 
       $("priceChange").textContent =
-        (change >= 0 ? "+" : "") +
+        (
+          change >= 0
+            ? "+"
+            : ""
+        ) +
         price(change) +
         " (" +
-        (changeRate >= 0 ? "+" : "") +
+        (
+          changeRate >= 0
+            ? "+"
+            : ""
+        ) +
         changeRate.toFixed(2) +
         "%)";
 
 
       $("profit").className =
         "value " +
-        (result.profit >= 0 ? "up" : "down");
+        (
+          result.profit >= 0
+            ? "up"
+            : "down"
+        );
 
 
       $("profitRate").className =
         "small " +
-        (result.rate >= 0 ? "up" : "down");
+        (
+          result.rate >= 0
+            ? "up"
+            : "down"
+        );
 
 
       $("priceChange").className =
         "info-value " +
-        (change >= 0 ? "up" : "down");
+        (
+          change >= 0
+            ? "up"
+            : "down"
+        );
 
     }
 
 
-    /* =========================
+    /* ==========================================
        每日表格
-    ========================= */
+    ========================================== */
 
     function renderTable() {
 
-      $("dailyTable").innerHTML =
-        dailyData.map(row => {
-
-          const result =
-            calculate(row);
+      const tbody =
+        $("dailyTable");
 
 
-          return `
-            <tr>
+      if (!dailyData.length) {
 
-              <td>
-                ${dateText(row.date)}
-              </td>
+        tbody.innerHTML = `
+          <tr>
+            <td
+              colspan="5"
+              class="empty"
+            >
+              尚無資料
+            </td>
+          </tr>
+        `;
 
-              <td>
-                $${price(row.close)}
-              </td>
+        return;
 
-              <td>
-                ${money(result.asset)}
-              </td>
+      }
 
-              <td class="${
-                result.profit >= 0 ? "up" : "down"
-              }">
-                ${
-                  result.profit >= 0 ? "+" : ""
-                }${money(result.profit)}
-              </td>
 
-              <td class="${
-                result.rate >= 0 ? "up" : "down"
-              }">
-                ${
-                  result.rate >= 0 ? "+" : ""
-                }${result.rate.toFixed(2)}%
-              </td>
+      tbody.innerHTML =
+        dailyData
+          .map(row => {
 
-            </tr>
-          `;
+            const result =
+              calculate(row);
 
-        }).join("");
+
+            return `
+
+              <tr>
+
+                <td>
+                  ${dateText(row.date)}
+                </td>
+
+                <td>
+                  $${price(row.close)}
+                </td>
+
+                <td>
+                  ${money(result.asset)}
+                </td>
+
+                <td
+                  class="${
+                    result.profit >= 0
+                      ? "up"
+                      : "down"
+                  }"
+                >
+
+                  ${
+                    result.profit >= 0
+                      ? "+"
+                      : ""
+                  }${money(result.profit)}
+
+                </td>
+
+                <td
+                  class="${
+                    result.rate >= 0
+                      ? "up"
+                      : "down"
+                  }"
+                >
+
+                  ${
+                    result.rate >= 0
+                      ? "+"
+                      : ""
+                  }${result.rate.toFixed(2)}%
+
+                </td>
+
+              </tr>
+
+            `;
+
+          })
+          .join("");
 
     }
 
 
-    /* =========================
+    /* ==========================================
        Canvas 圖表
-    ========================= */
+    ========================================== */
 
     function drawChart() {
 
-      const canvas = $("assetChart");
-      const container = canvas.parentElement;
+      const canvas =
+        $("assetChart");
 
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+
+      const container =
+        canvas.parentElement;
+
+
+      const width =
+        container.clientWidth;
+
+
+      const height =
+        container.clientHeight;
+
 
       const dpr =
         window.devicePixelRatio || 1;
 
 
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.width =
+        width * dpr;
+
+
+      canvas.height =
+        height * dpr;
 
 
       const ctx =
         canvas.getContext("2d");
 
 
-      ctx.scale(dpr, dpr);
+      ctx.scale(
+        dpr,
+        dpr
+      );
 
 
       ctx.clearRect(
@@ -675,34 +1125,55 @@
       );
 
 
-      const results =
-        dailyData.map(calculate);
+      if (
+        !dailyData.length ||
+        !shares
+      ) {
 
-
-      if (!results.length) {
         return;
+
       }
 
 
+      const results =
+        dailyData.map(
+          calculate
+        );
+
+
       const values =
-        results.map(row => row.asset);
+        results.map(
+          row => row.asset
+        );
 
 
-      let min = Math.min(...values);
-      let max = Math.max(...values);
+      let min =
+        Math.min(...values);
+
+
+      let max =
+        Math.max(...values);
 
 
       if (min === max) {
-        min *= .999;
+
+        min *= 0.999;
+
         max *= 1.001;
+
       }
 
 
       const padding = {
+
         left: 85,
+
         right: 25,
+
         top: 25,
+
         bottom: 45
+
       };
 
 
@@ -720,9 +1191,14 @@
 
       function x(index) {
 
-        if (results.length === 1) {
+        if (
+          results.length === 1
+        ) {
+
           return width / 2;
+
         }
+
 
         return (
           padding.left +
@@ -751,11 +1227,18 @@
 
       /* Grid */
 
-      ctx.strokeStyle = "#e5e7eb";
+      ctx.strokeStyle =
+        "#e5e7eb";
+
+
       ctx.lineWidth = 1;
 
 
-      for (let i = 0; i <= 4; i++) {
+      for (
+        let i = 0;
+        i <= 4;
+        i++
+      ) {
 
         const yy =
           padding.top +
@@ -765,28 +1248,41 @@
 
         ctx.beginPath();
 
+
         ctx.moveTo(
           padding.left,
           yy
         );
+
 
         ctx.lineTo(
           width - padding.right,
           yy
         );
 
+
         ctx.stroke();
 
 
         const value =
           max -
-          (max - min) *
-          i / 4;
+          (
+            max - min
+          ) *
+          i /
+          4;
 
 
-        ctx.fillStyle = "#6b7280";
-        ctx.font = "12px sans-serif";
-        ctx.textAlign = "right";
+        ctx.fillStyle =
+          "#6b7280";
+
+
+        ctx.font =
+          "12px sans-serif";
+
+
+        ctx.textAlign =
+          "right";
 
 
         ctx.fillText(
@@ -803,102 +1299,159 @@
       ctx.beginPath();
 
 
-      results.forEach((row, index) => {
+      results.forEach(
+        (row, index) => {
 
-        const xx = x(index);
-        const yy = y(row.asset);
+          const xx =
+            x(index);
 
 
-        if (index === 0) {
-          ctx.moveTo(xx, yy);
-        } else {
-          ctx.lineTo(xx, yy);
+          const yy =
+            y(row.asset);
+
+
+          if (index === 0) {
+
+            ctx.moveTo(
+              xx,
+              yy
+            );
+
+          } else {
+
+            ctx.lineTo(
+              xx,
+              yy
+            );
+
+          }
+
         }
+      );
 
-      });
+
+      ctx.strokeStyle =
+        "#2563eb";
 
 
-      ctx.strokeStyle = "#2563eb";
       ctx.lineWidth = 3;
+
+
       ctx.stroke();
 
 
       /* Points */
 
-      results.forEach((row, index) => {
+      results.forEach(
+        (row, index) => {
 
-        const xx = x(index);
-        const yy = y(row.asset);
-
-
-        ctx.beginPath();
-
-        ctx.arc(
-          xx,
-          yy,
-          4,
-          0,
-          Math.PI * 2
-        );
+          const xx =
+            x(index);
 
 
-        ctx.fillStyle = "#ffffff";
-        ctx.fill();
+          const yy =
+            y(row.asset);
 
-        ctx.strokeStyle = "#2563eb";
-        ctx.lineWidth = 2;
-        ctx.stroke();
 
-      });
+          ctx.beginPath();
+
+
+          ctx.arc(
+            xx,
+            yy,
+            4,
+            0,
+            Math.PI * 2
+          );
+
+
+          ctx.fillStyle =
+            "#ffffff";
+
+
+          ctx.fill();
+
+
+          ctx.strokeStyle =
+            "#2563eb";
+
+
+          ctx.lineWidth = 2;
+
+
+          ctx.stroke();
+
+        }
+      );
 
 
       /* 日期 */
 
-      ctx.fillStyle = "#6b7280";
-      ctx.font = "12px sans-serif";
-      ctx.textAlign = "center";
+      ctx.fillStyle =
+        "#6b7280";
+
+
+      ctx.font =
+        "12px sans-serif";
+
+
+      ctx.textAlign =
+        "center";
 
 
       const step =
         Math.max(
           1,
-          Math.ceil(results.length / 6)
+          Math.ceil(
+            results.length / 6
+          )
         );
 
 
-      results.forEach((row, index) => {
+      results.forEach(
+        (row, index) => {
 
-        if (
-          index % step !== 0 &&
-          index !== results.length - 1
-        ) {
-          return;
+          if (
+            index % step !== 0 &&
+            index !==
+              results.length - 1
+          ) {
+
+            return;
+
+          }
+
+
+          ctx.fillText(
+            dateText(row.date),
+            x(index),
+            height - 15
+          );
+
         }
-
-
-        ctx.fillText(
-          dateText(row.date),
-          x(index),
-          height - 15
-        );
-
-      });
+      );
 
     }
 
 
-    /* =========================
+    /* ==========================================
        Render
-    ========================= */
+    ========================================== */
 
     function render() {
 
       renderDashboard();
+
       renderTable();
+
       drawChart();
 
     }
 
+
+    /* ==========================================
+       啟動
+    ========================================== */
 
     window.addEventListener(
       "resize",
